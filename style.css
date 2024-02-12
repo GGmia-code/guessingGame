@@ -1,13 +1,35 @@
 body {
     background-image: url(images/twilight-aesthetic.jpg);
     text-align: center;
+    object-fit: cover;
 }
 
-h1,h2,p{
+h1,h2{
     color: white;
 }
 
+p{
+  color: white;
+  font-size: 24px;
+}
+
+#fff {
+  opacity: 1 !important;
+}
 
 button {
     font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    height: 128px;
+    width: 128px;
+    object-fit: contain;
+    background-image: url(images/button_image.jpg);
+    opacity: 0.6;
+    border-radius: 50%;
+  } 
+
+  button:hover {
+    opacity: 0.9;
   }
+  
