@@ -1,0 +1,13 @@
+body {
+    background-image: url(images/twilight-aesthetic.jpg);
+    text-align: center;
+}
+
+h1,h2,p{
+    color: white;
+}
+
+
+button {
+    font-size: 24px;
+  }
