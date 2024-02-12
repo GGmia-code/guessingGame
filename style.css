@@ -29,12 +29,12 @@ p{
 button {
     font-size: 24px;
     font-weight: bold;
-    color: #fff;
+    color: red;
     height: 138px;
     width: 138px;
     object-fit: contain;
     background-image: url(images/button_image.jpg);
-    opacity: 0.6;
+    opacity: 0.7;
     margin: 30px;
     
 
@@ -43,6 +43,6 @@ button {
   
 
   button:hover {
-    opacity: 0.9;
+    opacity: 1;
   }
   
