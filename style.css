@@ -1,7 +1,22 @@
 body {
-    background-image: url(images/twilight-aesthetic.jpg);
+    /* background-image: url(images/twilight-aesthetic.jpg); */
+    background-color: darkslategray;
     text-align: center;
     object-fit: cover;
+}
+.header {
+  width: 100%;
+  height: 100vh; /* Make the header take up the entire viewport height */
+  overflow: hidden;
+}
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire header */
+  z-index: -1; /* Place the image behind other content */
 }
 
 h1{
@@ -10,8 +25,6 @@ h1{
   font-weight: bold;
   width: 950px; /* Adjust width as needed */
   padding: 20px; /* Adjust padding as needed */
-  border: 2px solid #284462;
-  background-color: #284462;
 }
 
 h2{
@@ -21,8 +34,6 @@ h2{
     font-style: normal;
     width: 950px; /* Adjust width as needed */
     padding: 20px; /* Adjust padding as needed */
-    border: 2px solid #284462;
-    background-color: #284462;
 }
 
 p{
@@ -43,10 +54,10 @@ button {
       1px  1px 0 #000;
     font-weight: bold;
     color: rgb(251, 249, 215);
-    height: 138px;
-    width: 138px;
+    height: 100px;
+    width: 150px;
     object-fit: contain;
-    background-image: url(images/button_image.jpg);
+    /* background-image: url(images/button_image.jpg); */
     opacity: 0.7;
     margin: 30px;
     padding: 10px 20px; /* Adjust padding as needed */
