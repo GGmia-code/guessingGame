@@ -1,26 +1,10 @@
 body {
-    /* background-image: url(images/twilight-aesthetic.jpg); */
+    background-image: url(images/9510050.jpg);
     background-color: #666666;
     text-align: center;
     object-fit: cover;
 }
 
-.header {
-  width: 100%;
-  /* height: auto; Make the header take up the entire viewport height */
-  /* background-size: cover; */
-  overflow: hidden;
-  object-fit: fill;
-  
-}
-/* .background-image {
-  height: 50%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-   Ensure the image covers the entire header
-  z-index: -1; Place the image behind other content
-} */
 
 h1{
   color: #000000;
