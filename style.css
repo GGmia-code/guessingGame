@@ -7,15 +7,16 @@ body {
 
 
 h1{
-  color: #000000;
+  color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  font-size: 50px;
   width: flex; /* Adjust width as needed */
-  padding: flex; /* Adjust padding as needed */
+  padding-top: 200px; /* Adjust padding as needed */
 }
 
 h2{
-    color:#000000;
+    color:#fff;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -24,13 +25,10 @@ h2{
 }
 
 p{
-  color: #000000;
+  color: #fff;
   font-size: 24px;
 }
 
-/* #fff {
-  opacity: 1 !important;
-} */
 
 button {
     font-size: 24px;
