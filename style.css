@@ -2,7 +2,7 @@ body {
     background-image: url(images/9510050.jpg);
     background-color: #666666;
     text-align: center;
-    object-fit: cover;
+    background-size: cover;
 }
 
 
