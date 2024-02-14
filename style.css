@@ -6,11 +6,12 @@ body {
 }
 
 .header {
+  height: 400px;
   width: 100%;
   /* height: auto; Make the header take up the entire viewport height */
   /* background-size: cover; */
   overflow: hidden;
-  object-fit: fill;
+  background-size: cover;
   
 }
 /* .background-image {
