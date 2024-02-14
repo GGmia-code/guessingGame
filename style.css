@@ -34,7 +34,7 @@ button {
     font-size: 24px;
     
     font-weight: bold;
-    color: black;
+    color: rgb(156, 8, 8);
     height: 100px;
     width: 150px;
     object-fit: contain;
@@ -53,8 +53,31 @@ button {
     font-family: "Roboto", sans-serif;
 
   }
+  #reload-button-container {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999; /* Ensure the button is on top of other content */
+  }
 
-  
+  #reload-button {
+    display: block;
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: 2px solid #fff; /* Add a border */
+    background-color: transparent; /* Transparent background */
+    color: red; /* Text color */
+    font-size: 16px; /* Font size */
+    border-radius: 10px; /* Border radius for rounded corners */
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  #reload-button:hover {
+      background-color: #fff; /* Change background color on hover */
+      color: #000; /* Change text color on hover */
+  }
+
 
   button:hover {
     opacity: 1;
