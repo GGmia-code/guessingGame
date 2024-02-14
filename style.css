@@ -23,8 +23,8 @@ h1{
   color: white;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
-  width: 950px; /* Adjust width as needed */
-  padding: 20px; /* Adjust padding as needed */
+  width: flex; /* Adjust width as needed */
+  padding: flex; /* Adjust padding as needed */
 }
 
 h2{
@@ -32,8 +32,8 @@ h2{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    width: 950px; /* Adjust width as needed */
-    padding: 20px; /* Adjust padding as needed */
+    width: flex; /* Adjust width as needed */
+    padding: flex; /* Adjust padding as needed */
 }
 
 p{
