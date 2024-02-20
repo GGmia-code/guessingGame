@@ -4,6 +4,26 @@ body {
     text-align: center;
     background-size: cover;
 }
+.progress-container {
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-dot {
+  width: 13px;
+  height: 13px;
+  background-color: #ddd;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;
+}
+
+.progress-dot.active {
+  background-color: #4caf50;
+}
 
 
 h1{
@@ -11,8 +31,8 @@ h1{
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 50px;
-  width: flex; /* Adjust width as needed */
-  padding-top: 200px; /* Adjust padding as needed */
+  width: flex;
+  padding-top: 200px; 
 }
 
 h2{
@@ -20,8 +40,8 @@ h2{
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    width: flex; /* Adjust width as needed */
-    padding: flex; /* Adjust padding as needed */
+    width: flex; 
+    padding: flex; 
 }
 
 p{
@@ -38,13 +58,12 @@ button {
     height: 100px;
     width: 150px;
     object-fit: contain;
-    /* background-image: url(images/button_image.jpg); */
     opacity: 0.7;
     margin: 30px;
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    border: 1px solid #333; /* Border color and width */
-    outline: none; /* Remove default outline */
+    padding: 10px 20px; 
+    font-size: 16px;
+    border: 1px solid #333;
+    outline: none;
     cursor: pointer;
 
   } 
@@ -58,28 +77,25 @@ button {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999; /* Ensure the button is on top of other content */
+    z-index: 999; 
   }
 
   #reload-button {
     display: block;
-    padding: 10px 20px; /* Adjust padding as needed */
-    border: 2px solid #fff; /* Add a border */
-    background-color: transparent; /* Transparent background */
-    color: red; /* Text color */
-    font-size: 16px; /* Font size */
-    border-radius: 10px; /* Border radius for rounded corners */
+    padding: 10px 20px; 
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: red;
+    font-size: 16px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   #reload-button:hover {
-      background-color: #fff; /* Change background color on hover */
-      color: #000; /* Change text color on hover */
+      background-color: #fff;
+      color: #000;
   }
-
-
-  
 
   button:hover {
     opacity: 1;

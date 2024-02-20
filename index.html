@@ -33,6 +33,13 @@
     </style>
 </head>
 <body>
+    <div class="progress-container">
+        <div class="progress-dot" id="dot1"></div>
+        <div class="progress-dot" id="dot2"></div>
+        <div class="progress-dot" id="dot3"></div>
+        <div class="progress-dot" id="dot4"></div>
+        <div class="progress-dot" id="dot5"></div>
+    </div>
     <!-- <div class="header">
         <img src="images/Vampires_Ankhesenamun.jpg" alt="Twilight header image">
     </div> -->
@@ -79,90 +86,64 @@
     </div>
     <div class="final-score" style="display: none;"></div>
     <script>
-        let questions = document.querySelectorAll(".question");
-        //Selected all button
-        // let myButtons = document.querySelectorAll("button");
+    let questions = document.querySelectorAll(".question");
+    let scoreElement = document.querySelector(".score-element");
+    let dots = document.querySelectorAll(".progress-dot");
+    let score = 0;
+    let currentQuestionIndex = 0;
 
+    function disableButtons(question) {
+        let buttons = question.querySelectorAll("button");
+        buttons.forEach(button => button.disabled = true);
+    }
 
-        //Select my score element
-        let scoreElement = document.querySelector(".score-element");
-        
+    function updateProgressBar() {
+        dots[currentQuestionIndex].classList.add("active");
+    }
 
-        //create score tracker
-        let score = 0;
+    function showNextQuestion() {
+        questions[currentQuestionIndex].classList.remove("active");
+        currentQuestionIndex++;
 
-        let currentQuestionIndex = 0;
+        if (currentQuestionIndex < questions.length) {
+            questions[currentQuestionIndex].classList.add("active");
+        } else {
+            document.querySelector('.final-score').style.display = 'block';
+            document.getElementById('reload-button').style.display = 'block';
+        }
+    }
 
-        //let question;
+    function checkAnswer(event) {
+        let button = event.target;
+        let question = button.parentElement;
+        let isCorrect = button.classList.contains("correct");
 
-        function disableButtons(question) {
+        button.classList.add("clicked");
 
-            // let currentButtons = question.querySelectorAll("button");
-            let buttons  = question.querySelectorAll("button");
-            buttons.forEach(button => button.disabled = true);
-            //for each button
-            // for (let button of currentButtons) {
-            //     button.disabled = true;
-            // }
-            //disable it
-
+        if (isCorrect) {
+            score++;
+            scoreElement.innerText = score;
+            updateProgressBar();
         }
 
-        function showNextQuestion() {
-            questions[currentQuestionIndex].classList.remove("active");
-            currentQuestionIndex++;
+        disableButtons(question);
 
-            if (currentQuestionIndex < questions.length) {
-                questions[currentQuestionIndex].classList.add("active");
-            } else {
-                // All questions answered
-                document.querySelector('.final-score').style.display = 'block';
-            
-                document.getElementById('reload-button').style.display = 'block';
-            }
-        }
-        
-        
-        function checkAnswer(event) {
-            let button = event.target;
-            let question = button.parentElement;
-            let isCorrect = button.classList.contains("correct");
+        setTimeout(showNextQuestion, 1000);
+    }
 
-            button.classList.add("clicked");
+    document.addEventListener("DOMContentLoaded", function() {
+        dots[0].classList.add("active");
+    });
 
-            if (isCorrect){
-                // adds 1
-                score++;
-                scoreElement.innerText = score;
-            }
-            
-            disableButtons(question);
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(button => button.addEventListener('click', checkAnswer));
+    questions[currentQuestionIndex].classList.add("active");
 
-            setTimeout(showNextQuestion, 1000);
-        }
-
-
-        //for each button
-    //     for (button of myButtons) {
-    //         console.log(button);
-
-    //         //When clicked, checkAnswer
-    //         button.onclick = checkAnswer;
-
-
-    //         // button.style.background = "red";
-    //    }
-        let buttons = document.querySelectorAll("button");
-        buttons.forEach(button => button.addEventListener('click', checkAnswer));
-        questions[currentQuestionIndex].classList.add("active");
-        
-
-        // Event listener for reload button
-        
-        document.getElementById('reload-button').addEventListener('click', function() {
+    document.getElementById('reload-button').addEventListener('click', function() {
         location.reload();
     });
-    </script>
+</script>
+
     
 </body>
 </html>
