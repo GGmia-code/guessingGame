@@ -85,7 +85,7 @@
         <button id="reload-button" style="display: none;">Play Again</button>
     </div>
     <div class="final-score" style="display: none;"></div>
-    <script>
+<script>
     let questions = document.querySelectorAll(".question");
     let scoreElement = document.querySelector(".score-element");
     let dots = document.querySelectorAll(".progress-dot");
@@ -107,6 +107,7 @@
 
         if (currentQuestionIndex < questions.length) {
             questions[currentQuestionIndex].classList.add("active");
+            updateProgressBar();
         } else {
             document.querySelector('.final-score').style.display = 'block';
             document.getElementById('reload-button').style.display = 'block';
@@ -123,11 +124,9 @@
         if (isCorrect) {
             score++;
             scoreElement.innerText = score;
-            updateProgressBar();
         }
 
         disableButtons(question);
-
         setTimeout(showNextQuestion, 1000);
     }
 
